@@ -104,10 +104,6 @@ body {
 .overflow-wrap {
   overflow-x: hidden; }
 
-.bgwebsite{
-  background-image: url("../img/website.jpg");
-}
-
 .canvas {
   position: absolute;
   top: 0;
@@ -177,7 +173,7 @@ body {
   transform: rotateZ(-60deg); }
 
 .highlight {
-  color: #E31B6D; }
+  color: #000000; }
 
 .header {
   font-size: 25pt;
@@ -206,7 +202,7 @@ nav {
   position: absolute;
   height: 50px;
   width: 100%;
-  background: #1B242F;
+  background: #390a10;
   border-bottom: 3px solid #04C2C9;
   text-align: left;
   z-index: 99; }
@@ -222,7 +218,7 @@ nav {
     width: 100%;
     position: absolute;
     top: 53px;
-    background: #333;
+    background: #390a10;
     overflow: hidden;
     height: 0;
     transition: height .3s ease-out; }
@@ -411,6 +407,7 @@ section {
   section:nth-of-type(1) {
     padding: 0 10px;
     color: #fff;
+    background-color:#390a10;
     height: calc(100vh + 53px); }
     section:nth-of-type(1) .highlight {
       font-family: 'Raleway-semibold'; }
@@ -542,7 +539,7 @@ section {
       overflow: hidden;
       height: 25px;
       border-radius: 1px;
-      background: #E31B6D;
+      background: #390a10;
       transition: all .5s ease-in-out; }
       section:nth-of-type(3) .float-bar .row {
         top: 0;
@@ -679,7 +676,7 @@ section {
       line-height: 13pt;
       max-height: 85px; }
   section:nth-of-type(5) {
-    background: #252934;
+    background: #962634;
     color: #fff;
     padding-top: 175px; }
     section:nth-of-type(5) .header {
@@ -746,7 +743,7 @@ section {
       cursor: pointer; }
 
 footer {
-  background: #1B242F;
+  background: #390a10;
   padding: 70px 0 50px 0;
   position: relative; }
   footer .mdi-chevron-double-up {
@@ -773,7 +770,7 @@ footer {
     position: relative;
     text-align: center;
     margin: 0 15px;
-    background: #262F38;
+    background: #390a10;
     font-size: 18pt; }
   footer .icon-wrap .mdi {
     text-align: center;
@@ -964,9 +961,18 @@ footer {
     animation: popIn 1s both; }
 
   .canvas {
-    /*background: url("../img/filler.jpg");*/
+    background: url("../img/filler.jpg");
     background: #252934;
      }
+
+  .bgwebsite {
+    background: url("../img/filler.jpg");
+    background-size: cover;
+  width: 100%;
+  height: 100%;
+     }
+
+     
 
   .button {
     font-size: 16pt; }
@@ -1055,6 +1061,8 @@ ul {
 #photo-gallery {
   width: 100%;
 }
+
+
 
 .picture:hover{
   transition: transform .2s;
