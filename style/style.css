@@ -1099,3 +1099,24 @@ ul {
   from, to { border-color: transparent }
   50% { border-color: orange; }
 }
+
+
+#preloader{
+  background-color:#101524; 
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  z-index:9999;  
+}
+
+.loader {
+  background: url("../img/134.svg") no-repeat scroll center center rgba(0, 0, 0, 0);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: calc(50% - 25px);
+  top: calc(50% - 25px);
+
+}

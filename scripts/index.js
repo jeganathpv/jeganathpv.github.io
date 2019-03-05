@@ -11,6 +11,13 @@ $(function() {
    })
   }
 
+  //PRELOADER
+ $(window).load(function(){
+        $('.loader').fadeOut();    
+        $('#preloader').delay(350).fadeOut('slow');    
+        $('body').delay(700);   
+
+    });
   // RESIZE RESETS
   $(window).resize(function(){
     posFilterBar($('.filter').first());
