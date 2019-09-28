@@ -21,10 +21,27 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/lib/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/lib/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/lib/slick/slick-theme.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link id="darkTheme" rel="stylesheet" type="text/css" href="assets/css/dark.css" disabled="disabled">
+	<link id="lightTheme" rel="stylesheet" type="text/css" href="assets/css/light.css">
+
+	<script>
+	function changeTheme(){
+		let dark = document.getElementById('darkTheme');
+		let light =document.getElementById('lightTheme');
+		let date = new Date();
+		let currentHour = date.getHours();
+		if((currentHour>=18 && currentHour<=24) || (currentHour>=0 && currentHour<=6)){
+			dark.removeAttribute('disabled');
+			light.setAttribute('disabled','disabled');
+		}else{
+			light.removeAttribute('disabled');
+			dark.setAttribute('disabled','disabled');
+		}
+	}
+	</script>
 </head>
 
-<body>
+<body onload="changeTheme()">
 	
 	<!-- @HEADER -->
 	<nav class="navbar navbar-expand-lg fixed-top custom-nav sticky header-main-page">
@@ -33,7 +50,7 @@
 				<img src="images/logo.png" class="demo-logo">
 				
 			</a>
-
+			
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
 			 aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fas fa-bars"></i>
@@ -41,22 +58,22 @@
 			<div class="collapse navbar-collapse" id="navbarCollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a href="#home" class="nav-link">Home</a>
+						<a href="#home" class="nav-link" onclick="hideNavBar()">Home</a>
 					</li>
 					<li class="nav-item">
-						<a href="#about" class="nav-link">About</a>
+						<a href="#about" class="nav-link"  onclick="hideNavBar()">About</a>
 					</li>
 					<li class="nav-item">
-						<a href="#services" class="nav-link">Services</a>
+						<a href="#services" class="nav-link" onclick="hideNavBar()">Services</a>
 					</li>
 					<li class="nav-item">
-						<a href="#experience" class="nav-link">Experience</a>
+						<a href="#experience" class="nav-link" onclick="hideNavBar()">Experience</a>
 					</li>
 					<li class="nav-item">
-						<a href="#works" class="nav-link">Work</a>
+						<a href="#works" class="nav-link" onclick="hideNavBar()">Work</a>
 					</li>
 					<li class="nav-item">
-						<a href="#contact" class="nav-link">Contact</a>
+						<a href="#contact" class="nav-link" onclick="hideNavBar()">Contact</a>
 					</li>
 				</ul>
 			</div>

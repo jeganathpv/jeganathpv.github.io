@@ -84,3 +84,7 @@ $(document).ready(function () {
   Theme.Counter();
 });
 
+function hideNavBar(){
+  let navbar = document.getElementById('navbarCollapse');
+  navbar.className = navbar.className.replace(" show","");
+}
