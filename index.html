@@ -30,7 +30,7 @@
 		let light =document.getElementById('lightTheme');
 		let date = new Date();
 		let currentHour = date.getHours();
-		if((currentHour>=18 && currentHour<=24) || (currentHour>=0 && currentHour<=6)){
+		if((currentHour>=18 && currentHour<=24) || (currentHour>=0 && currentHour<6)){
 			dark.removeAttribute('disabled');
 			light.setAttribute('disabled','disabled');
 		}else{
