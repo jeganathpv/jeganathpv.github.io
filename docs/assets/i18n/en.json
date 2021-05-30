@@ -3,7 +3,13 @@
     "greeting": "Hello",
     "companyName" : "XYZ Solutions",
     "copyright" : "Copyright",
-    "letsTalk" : "Let's Talk"
+    "letsTalk" : "Let's Talk",
+    "message":{
+      "maxCharReached": "You have reached the maximum characters.",
+      "charUsed": "{{usedChar}}/{{totalChar}} characters are used.",
+      "invalidEmail": "Invalid Email address.",
+      "checkRequiredFields": "Please check the required fields."
+    }
   },
   "menu":{
     "home": "Home",
@@ -20,10 +26,11 @@
   "contact":{
     "formTitle": "Contact Us",
     "name": "Name",
-    "company": "Company Name",
+    "company": "Company Name (Optional)",
     "email": "Email",
-    "mobile": "Mobile",
-    "message": "Message"
+    "mobile": "Mobile (Optional)",
+    "message": "Message",
+    "send": "Send"
   },
   "about" : {
     "heading" : "Experience the Affordable Solutions",
