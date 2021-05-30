@@ -1,0 +1,56 @@
+{
+  "common": { 
+    "greeting": "Hello",
+    "companyName" : "XYZ Solutions",
+    "copyright" : "Copyright",
+    "letsTalk" : "Let's Talk",
+    "message":{
+      "maxCharReached": "You have reached the maximum characters.",
+      "charUsed": "{{usedChar}}/{{totalChar}} characters are used.",
+      "invalidEmail": "Invalid Email address.",
+      "checkRequiredFields": "Please check the required fields."
+    }
+  },
+  "menu":{
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "services": "Services",
+    "portfolio":"Portfolio",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "XYZ Solutions",
+    "description": "Building Products that matters to Customers"
+  },
+  "contact":{
+    "formTitle": "Contact Us",
+    "name": "Name",
+    "company": "Company Name (Optional)",
+    "email": "Email",
+    "mobile": "Mobile (Optional)",
+    "message": "Message",
+    "send": "Send"
+  },
+  "about" : {
+    "heading" : "Experience the Affordable Solutions",
+    "description" : "We build creative Web and Mobile applications varying from start up businesses to large corporate and non-government organizations."
+    
+  },
+  "services":{
+    "webApp": "Web Application",
+    "webAppDesc": "Design and Develop Web Apps for all Business Usecases and Effective Business Solutions and Insights",
+    "mobApp": "Mobile Application",
+    "mobAppDesc": "Building Mobile Native and Cross Platform Apps - Automated Deployment and Payment Integrations",
+    "uiux": "UI/UX",
+    "uiuxDesc": "Creative Designs , Painted with Extreme Design Sense that People Love",
+    "pwa": "PWA",
+    "pwaDesc": "Progressive Web Apps for business - One Stop Solution",
+    "techSupport": "Technical Support",
+    "techSupportDesc": "Excellent IT Support for Infrastructure and Cloud Management",
+    "consult": "Consulting Services",
+    "consultDesc": "First-Class Consulting with Authentic Business Solutions with witty Engineering and Business Team",
+    "training": "Technical Training",
+    "trainingDesc": "Giving Technical Training to Corporates and Students, Creating Industry Ready Candidates"
+  }
+}
