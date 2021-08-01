@@ -1,0 +1,18 @@
+.container{
+    .title{
+        margin: auto;
+        font-family: 'Gilroy-ExtraBold';
+        text-align: center;
+    }
+
+    .content{
+        .works{
+            padding: 0 20px;
+            .success{
+                .work{
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}

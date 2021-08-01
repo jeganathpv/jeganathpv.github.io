@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CardComponent } from './shared/card/card.component';
 import { FormsModule } from '@angular/forms';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,12 +30,13 @@ import {OverlayPanelModule} from 'primeng/overlaypanel';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    OverlayPanelModule
+    OverlayPanelModule,
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

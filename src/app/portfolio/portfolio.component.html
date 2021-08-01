@@ -1,1 +1,20 @@
-<p>portfolio works!</p>
+<div class="container">
+    <div class="title">
+        <h1>My Recent Works</h1>
+    </div>
+    <div class="content">
+        <div *ngIf="isLoaded" class="works">
+            <div *ngIf="isSucceeded" class="success flex row">
+                <div *ngFor="let work of works" class="work">
+                    <app-card [hasImage]=false [hasLink]=true [title]="work.name" [content]="work.description" [linkUrl]="work.projectUrl" [linkName]="'View Project'" [height]=250></app-card>
+                </div>
+            </div>
+            <div *ngIf="!isSucceeded" class="failure">
+                <span>Something went wrong! Please try again later...</span>
+            </div>
+        </div>
+        <div *ngIf="!isLoaded" class="works">
+
+        </div>
+    </div>
+</div>
