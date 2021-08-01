@@ -1,0 +1,31 @@
+.container{
+    height: calc(100vh - 70px);
+    background-image: url(../../assets/images/banner.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.quote{
+    color: var(--secondary-light);
+    justify-content: center;
+    display: flex;
+    align-items: flex-end;
+    padding-top: 75vh;
+    text-align: center;
+    font-family: 'Gilroy-Extrabold';
+    font-size: xx-large;
+    margin: 0 10px;
+}
+
+
+
+
+@media screen and (max-width: 756px) {
+    .container{
+        background-size: cover;
+    }
+
+    .quote {
+        font-size: small;
+    }
+}
