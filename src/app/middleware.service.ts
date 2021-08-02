@@ -10,7 +10,7 @@ export class MiddlewareService {
 
   gitToken = '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';
 
-  mediumToken = '28002ff09fc0ba516af001f9afb8b94eb8fedd5342ca466fdebb7ddb0c86c551d';
+  mediumFeedUrl = 'https://medium.com/feed/@jeganathpv';
 
   /**
    * To get GIT Header.
@@ -44,6 +44,7 @@ export class MiddlewareService {
    * @returns Observable
    */
   getBlogList(){
-    return this.http.get('');
+    const url = `https://api.rss2json.com/v1/api.json?rss_url=${this.mediumFeedUrl}`;
+    return this.http.get(url);
   }
 }

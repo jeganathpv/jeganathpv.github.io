@@ -1,199 +1,192 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'assets/icomoon/style.css';
-@import 'assets/fonts/fonts.scss';
+@import "assets/icomoon/style.css";
+@import "assets/fonts/fonts.scss";
 
 :root {
-    --primary: #20043E;
-    --primary-light: #30065C;
-    --primary-dark: #1E043A;
-    --secondary: #E5085D;
-    --secondary-light: #F50964;
-    --secondary-dark: #D20855;
-    --font: #F6E8FD;
-    --font-light:#FFFFFF;
-    --font-dark: #EED2FC;
+  --primary: #20043e;
+  --primary-light: #30065c;
+  --primary-dark: #1e043a;
+  --secondary: #e5085d;
+  --secondary-light: #f50964;
+  --secondary-dark: #d20855;
+  --font: #f6e8fd;
+  --font-light: #ffffff;
+  --font-dark: #eed2fc;
 }
 
 body {
-    font-family: 'Muli';
-    margin: 0 auto;
-    background-color: var(--primary);
-    color: var(--font);
-  }
+  font-family: "Muli";
+  margin: 0 auto;
+  background-color: var(--primary);
+  color: var(--font);
+}
 
-  ul {
-    list-style-type: none;
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--font);
-  }
-  
-  h1,
-  h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
-  }
-  
-  p {
-    margin: 10px 0;
-  }
-  
-  img {
-    width: 100%;
-  }
-  
-  input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
-  
-  .bold{
-    font-family: 'Gilroy-ExtraBold';
-  }
-  
-  .hidden {
-    visibility: hidden;
-    height: 0;
-  }
-  
-  .flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-  
-  .flex {
-    display: flex;
-    flex: 1 auto;
-    flex-wrap: wrap;
-  }
-  
-  .flex.row {
-    flex-direction: row;
-  }
-  
-  .flex.column {
-    flex-direction: column;
-  }
-  
-  /* Text sizes */
-  .lead {
-    font-size: 20px;
-    font-family: 'Gilroy-ExtraBold';
-  }
-  
-  .sm {
-    font-size: 1em;
-  }
-  
-  .md {
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.bold {
+  font-family: "Gilroy-ExtraBold";
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+  flex: 1 auto;
+  flex-wrap: wrap;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.column {
+  flex-direction: column;
+}
+
+/* Text sizes */
+.lead {
+  font-size: 20px;
+  font-family: "Gilroy-ExtraBold";
+}
+
+.sm {
+  font-size: 1em;
+}
+
+.md {
+  font-size: 2em;
+}
+
+.lg {
+  font-size: 3em;
+}
+
+.xl {
+  font-size: 4em;
+}
+
+
+@media (max-width: 768px) {
+  .xl {
     font-size: 2em;
   }
-  
   .lg {
-    font-size: 3em;
+    font-size: 1.5em;
   }
-  
-  .xl {
-    font-size: 4em;
-  }
+}
 
-// .btn {
-//     background-color: var(--primary-light);
-// 	background-image: linear-gradient(145deg, var(--primary-light), var(--secondary));
-//     color: var(--font);
-// }
-
-@media (max-width: 768px){
-    .xl {
-      font-size: 2em;
-    }
-    .lg {
-      font-size: 1.5em;
-    }
-  }
-
+.all-work {
+  display: flex;
+  justify-content: center;
+  color: var(--font);
+  width: max-content;
+  margin: 35px auto;
+}
 
 /*
 Style for Header Overlay Menu
 */
 .p-overlaypanel {
-    width: 100%;
-    left: 0 !important;
-    padding: 0 7px;
-  
-    .p-overlaypanel-content {
-      color: var(--font);
-  
-      ul {
-        display: flex;
-        flex-direction: column;
-        background-color: var(--primary);
-  
-        li {
-          padding: 10px 7px;
-          font-size: 1.5em;
-          margin-left: 8px;
-          font-weight: 600;
-  
-          span:hover {
-            border-bottom: 2px solid var(--primary-dark);
-          }
+  width: 100%;
+  left: 0 !important;
+  padding: 0 7px;
+
+  .p-overlaypanel-content {
+    color: var(--font);
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--primary);
+
+      li {
+        padding: 10px 7px;
+        font-size: 1.5em;
+        margin-left: 8px;
+        font-weight: 600;
+
+        span:hover {
+          border-bottom: 2px solid var(--primary-dark);
         }
       }
     }
   }
-
-  .card-glass {
-    z-index: 2;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 32px 0 var(--primary-light);
-    box-shadow: inset 1px 1px 0.12px var(--primary-dark),
-      1px 1px 3px var(--primary);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(10px);
-    background-clip: padding-box;
 }
 
-.btn{
+.card-glass {
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 var(--primary-light);
+  box-shadow: inset 1px 1px 0.12px var(--primary-dark),
+    1px 1px 3px var(--primary);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(10px);
+  background-clip: padding-box;
+}
+
+
+.btn {
   background-color: var(--secondary);
   border-radius: 5px;
   margin-top: 15px;
   padding: 10px;
   font-size: 20px;
   box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
-  span{
-      padding: 10px;
-      margin: 10px;
+  span {
+    padding: 10px;
+    margin: 10px;
   }
 }
-.btn:hover{
+.btn:hover {
   border: 1px solid var(--secondary);
   background-color: var(--primary-light);
 }
 
-.glass {
-  z-index: 2;
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  box-shadow: inset 1px 1px 0.12px rgba(255, 255, 255, 0.4),
-    1px 1px 3px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background-clip: padding-box;
-}
+

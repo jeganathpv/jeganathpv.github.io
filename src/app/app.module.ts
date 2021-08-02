@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CardComponent } from './shared/card/card.component';
 import { FormsModule } from '@angular/forms';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {CarouselModule} from 'primeng/carousel';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LoaderComponent } from './shared/loader/loader.component';
 
@@ -37,6 +38,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
     FormsModule,
     BrowserAnimationsModule,
     OverlayPanelModule,
+    CarouselModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]
