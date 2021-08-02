@@ -15,6 +15,7 @@ import { CardComponent } from './shared/card/card.component';
 import { FormsModule } from '@angular/forms';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { LoaderComponent } from './shared/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     PortfolioComponent,
     FooterComponent,
     ContactComponent,
-    CardComponent
+    CardComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

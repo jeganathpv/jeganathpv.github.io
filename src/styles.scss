@@ -112,11 +112,11 @@ body {
     font-size: 4em;
   }
 
-.btn {
-    background-color: var(--primary-light);
-	background-image: linear-gradient(145deg, var(--primary-light), var(--secondary));
-    color: var(--font);
-}
+// .btn {
+//     background-color: var(--primary-light);
+// 	background-image: linear-gradient(145deg, var(--primary-light), var(--secondary));
+//     color: var(--font);
+// }
 
 @media (max-width: 768px){
     .xl {
@@ -167,6 +167,23 @@ Style for Header Overlay Menu
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(10px);
     background-clip: padding-box;
+}
+
+.btn{
+  background-color: var(--secondary);
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+  span{
+      padding: 10px;
+      margin: 10px;
+  }
+}
+.btn:hover{
+  border: 1px solid var(--secondary);
+  background-color: var(--primary-light);
 }
 
 .glass {

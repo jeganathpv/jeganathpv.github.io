@@ -16,9 +16,12 @@ export class PortfolioComponent implements OnInit {
   constructor(private middleWare: MiddlewareService) { }
 
   ngOnInit(): void {
-    this.fetchRecentWorks()
+    this.fetchRecentWorks();
   }
 
+  /**
+   * To fetch recent works from github
+   */
   fetchRecentWorks(){
     this.middleWare.getRecentRepos().then((data) => {
       if(!Array.isArray(data)){
@@ -33,7 +36,7 @@ export class PortfolioComponent implements OnInit {
           });
         }
       });
-      this.works = this.works.slice(0,5);
+      this.works = this.works.slice(0,6);
 
       this.isSucceeded = true;
       this.isLoaded = true;

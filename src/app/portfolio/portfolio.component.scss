@@ -1,8 +1,17 @@
 .container{
+    // height: calc(100vh - 70px);
+    // background-image: url(../../assets/images/banner2.svg);
+    // background-position: right;
+    // background-repeat: no-repeat;
+}
+
+.container{
     .title{
         margin: auto;
         font-family: 'Gilroy-ExtraBold';
         text-align: center;
+        font-size: 30px;
+        color: var(--secondary-light);
     }
 
     .content{
@@ -10,9 +19,23 @@
             padding: 0 20px;
             .success{
                 .work{
-                    padding: 20px;
+                    padding: 25px;
                 }
             }
+            .failure{
+                text-align: center;
+                font-size: 35px;
+                height: 100px;
+            }
+        }
+
+        .all-work{
+            display: flex;
+            justify-content: center;
+            color: var(--font);
+            width: max-content;
+            margin: 35px auto;
         }
     }
 }
+

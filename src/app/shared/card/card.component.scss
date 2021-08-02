@@ -17,6 +17,10 @@
         h1{
             font-family: 'Gilroy-ExtraBold';
         }
+        height: 100px;
+        overflow: hidden;
+        word-break: break-all;
+        text-overflow: ellipsis;
     }
 
     .content{
@@ -33,10 +37,15 @@
         margin-top: 15px;
         padding: 10px;
         font-size: 20px;
+        box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
         span{
             padding: 10px;
             margin: 10px;
         }
+    }
+    .link:hover{
+        border: 1px solid var(--secondary);
+        background-color: var(--primary-light);
     }
 
 
