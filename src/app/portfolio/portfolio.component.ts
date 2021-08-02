@@ -1,5 +1,5 @@
-import { error } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { Work } from '../app.models';
 import { MiddlewareService } from '../middleware.service';
 
 @Component({
@@ -43,10 +43,4 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
-}
-
-export class Work{
-  name!: string;
-  description!: string;
-  projectUrl!: string;
 }

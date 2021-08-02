@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Blog } from '../app.models';
 import { MiddlewareService } from '../middleware.service';
 
 @Component({
@@ -80,12 +81,4 @@ export class BlogComponent implements OnInit {
     return htmlElements.getElementsByTagName('p')[0].innerText
   }
 
-}
-
-export class Blog{
-  name?: string;
-  description?: string;
-  thumbnail?: string;
-  date?: Date;
-  blogUrl?: string;
 }

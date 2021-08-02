@@ -1,0 +1,152 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.context {
+  display: flex;
+  flex-direction: column;
+  padding: 10% 5%;
+  background-color: var(--secondary-light);
+  width: 50%;
+
+  div {
+    margin: 0 auto;
+    padding: 2%;
+    font-weight: 700;
+  }
+}
+
+.coffee{
+    margin-left: 0px !important;
+    img{
+        width: 200px !important;
+    }
+    img:hover{
+        box-shadow: var(--primary-light) 0px 0 10px;
+        border-radius: 10px;
+    }
+}
+
+.contact-form {
+  position: relative;
+  height: auto;
+  width: 50%;
+  padding: 40px 80px;
+  z-index: 100;
+  justify-self: flex-end;
+  background-color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  color: var(--font);
+
+  .message {
+    padding: 10px 0;
+  }
+
+  .form-control {
+    margin: 30px 0;
+    display: flex;
+    background-color: var(--primary-dark);
+    padding: 8px 8px;
+
+    i {
+      font-size: 21px;
+      opacity: 0.7;
+      margin-top: 2px;
+      padding-right: 3px;
+    }
+    .icon-bubble2 {
+      opacity: 0.6;
+    }
+  }
+
+  .border-line {
+    border-bottom: 1px solid var(--secondary-light);
+  }
+
+  .border-line:focus-within {
+    border-bottom: 1px solid var(--secondary-dark);
+  }
+
+  .border-line-error {
+    border-bottom: 1px solid var(--secondary-dark) !important;
+  }
+
+  .input-field {
+    border: 0;
+    color: var(--font);
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+    font-family: "Muli";
+    background-color: var(--primary);
+  }
+
+  .input-field:focus {
+    outline: none;
+  }
+
+  .text-area {
+    display: block;
+    background-color: var(--primary);
+    color: var(--font);
+
+    div {
+      display: flex;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .submit.btn {
+    width: 80px;
+    text-align: center;
+    float: right;
+    span {
+      margin: auto !important;
+    }
+  }
+
+  .input-info-msg {
+    color: var(--font-dark);
+    padding-top: 7px;
+  }
+
+  .response-msg {
+    font-family: "Gilroy-ExtraBold";
+    padding-top: 12px;
+
+    .form-info-error {
+      width: 55%;
+      color: var(--secondary-dark);
+    }
+    .form-info-success {
+      width: 55%;
+      color: var(--font-light);
+    }
+  }
+}
+
+.message {
+  font-size: 1.5rem;
+}
+
+/* Tablets and under */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    .context {
+      width: 100%;
+      padding: 75px 5%;
+    }
+  }
+
+  .contact-form {
+    width: 95%;
+    margin: auto;
+    padding: 40px 20px;
+  }
+}

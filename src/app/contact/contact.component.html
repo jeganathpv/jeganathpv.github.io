@@ -1,1 +1,60 @@
-<p>contact works!</p>
+<div class="container ">
+    <div class="context">
+        <div class="lg bold"><span>Do you want to collaborate with me?</span></div>
+        <div class="md"><span>We can work together to build more awesome things.</span></div>
+        <div class="coffee">
+            <a target=”_blank” href="https://www.buymeacoffee.com/jeganathpv"><img src="../../assets/images/bmc-button.svg" alt="Buy me a Coffee"></a>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <strong><span class="lg bold">Get in touch</span></strong>
+
+        <span class="message">Let's talk with me</span>
+        <div class="contact">
+            <div class="form-control border-line" [ngClass]="!hasName ? 'border-line-error' : ''">
+                <i class="icon-person_outline"></i>
+                <input class="input-field" type="text" [(ngModel)]="contact.name" placeholder="Name" />
+            </div>
+            <div class="form-control text-area border-line"
+                [ngClass]="!isValidEmail || !hasEmail ? 'border-line-error' : ''">
+                <div>
+                    <i class="icon-alternate_email"></i>
+                    <input class="input-field" type="text" [(ngModel)]="contact.email" placeholder="Email"
+                        (focus)="isValidEmail=true" (blur)="validateEmail()" />
+                </div>
+                <span *ngIf="!isValidEmail" class="input-info-msg">Invalid Email address</span>
+            </div>
+            <div class="form-control border-line">
+                <i class="icon-phone"></i>
+                <input class="input-field" type="text" [(ngModel)]="contact.mobile" placeholder="Mobile" />
+            </div>
+            <div class="form-control text-area border-line"
+                [ngClass]="contact.message.length >120 || !hasMessage ? 'border-line-error' : ''">
+                <div>
+                    <i class="icon-bubble2"></i>
+                    <textarea class="input-field" type="text" rows="3" maxlength="120" [(ngModel)]="contact.message"
+                        placeholder="Your message" autocomplete="off" (focus)="onFocusMessageArea()"
+                        (blur)="onBlurMessageArea()"></textarea>
+                </div>
+                <span *ngIf="contact.message.length >=120" class="input-info-msg">Max characters reached</span>
+                <span *ngIf="showCharCount && contact.message.length < 120"
+                    class="input-info-msg">{{contact.message.length }}/120 characters used</span>
+            </div>
+            <div class="submit btn btn-primary card" (click)="onSubmit()">
+                <span>Send</span>
+            </div>
+            <div *ngIf="showResponseMessage" class="response-msg">
+                <div *ngIf="isResponseSucceeded">
+                    <span class="form-info-success">Thanks for contacting</span>
+                </div>
+                <div *ngIf="!isResponseSucceeded">
+                    <span class="form-info-error">Something went wrong</span>
+                </div>
+            </div>
+
+            <span *ngIf="!isValidForm" class="input-info-msg form-info-error">Please check required fields!</span>
+        </div>
+    </div>
+</div>

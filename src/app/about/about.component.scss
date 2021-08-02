@@ -97,9 +97,10 @@
       padding-top: 5px;
     }
 
-    img:hover {
-      box-shadow: 2px var(--primary);
-    }
+    img:hover{
+      box-shadow: var(--font-light) 0px 0 10px;
+      border-radius: 10px;
+  }
   }
 }
 

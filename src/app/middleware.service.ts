@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Contact } from './app.models';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class MiddlewareService {
   gitToken = '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';
 
   mediumFeedUrl = 'https://medium.com/feed/@jeganathpv';
+
+  contactForm: string = 'https://contact-flask-api.herokuapp.com';
 
   /**
    * To get GIT Header.
@@ -46,5 +49,18 @@ export class MiddlewareService {
   getBlogList(){
     const url = `https://api.rss2json.com/v1/api.json?rss_url=${this.mediumFeedUrl}`;
     return this.http.get(url);
+  }
+
+  /**
+   * To send message from user
+   * @param contact Contact
+   * @returns boolean
+   */
+  sendMessageInfo(contact: Contact){
+    return new Promise((resolve, reject) => {
+      this.http.post(this.contactForm + "/addMessage", contact).subscribe(response => {
+        resolve(response);
+      });
+    });
   }
 }
