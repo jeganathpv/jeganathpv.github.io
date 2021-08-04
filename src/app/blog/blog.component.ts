@@ -50,7 +50,7 @@ export class BlogComponent implements OnInit {
       if(!Array.isArray(blogItems)){
         return;
       }
-      let filteredBlogs = blogItems.slice(blogItems.length - 5, 5).reverse();
+      let filteredBlogs = blogItems.slice(blogItems.length - 5, 5);
       filteredBlogs.forEach(item => {
         this.blogs.push({
           name: item.title,
