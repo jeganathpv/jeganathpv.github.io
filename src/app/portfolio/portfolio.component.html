@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="title">
+        <h1>My Recent Works</h1>
+    </div>
+    <div class="content">
+        <div *ngIf="isLoaded" class="works">
+            <div *ngIf="isSucceeded" class="success flex row">
+                <div *ngFor="let work of works" class="work">
+                    <app-card [hasImage]=false [hasLink]=true [title]="work.name" [content]="work.description" [linkUrl]="work.projectUrl" [linkName]="'View Project'" [height]=250></app-card>
+                </div>
+            </div>
+            <div *ngIf="!isSucceeded" class="failure">
+                <span>Something went wrong! Please try again later...</span>
+            </div>
+        </div>
+        <div *ngIf="!isLoaded" class="works">
+            <app-loader></app-loader>
+        </div>
+
+        <div class="all-work btn">
+            <a href="https://github.com/jeganathpv" target="_blank"><span>View More Works</span></a>
+        </div>
+    </div>
+</div>

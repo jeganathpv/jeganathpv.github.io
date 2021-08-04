@@ -1,0 +1,35 @@
+.container{
+    // height: calc(100vh - 70px);
+    // background-image: url(../../assets/images/banner2.svg);
+    // background-position: right;
+    // background-repeat: no-repeat;
+}
+
+.container{
+    .title{
+        margin: auto;
+        font-family: 'Gilroy-ExtraBold';
+        text-align: center;
+        font-size: 30px;
+        color: var(--secondary-light);
+    }
+
+    .content{
+        .works{
+            padding: 0 20px;
+            .success{
+                .work{
+                    padding: 25px;
+                }
+            }
+            .failure{
+                text-align: center;
+                font-size: 35px;
+                height: 100px;
+            }
+        }
+
+        
+    }
+}
+

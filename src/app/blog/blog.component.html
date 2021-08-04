@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="blog-area">
+        <div class="lead">
+            <h1>Blogs</h1>
+        </div>
+        <p-carousel *ngIf="isLoaded" [value]="blogs" [showIndicators]=true [showNavigators]=false [styleClass]="'blog-carousel'" [numVisible]=3 [responsiveOptions]="responsiveOptions">
+            <!-- <ng-template pTemplate="header">
+                <div class="lead">
+                </div>
+            </ng-template> -->
+            <ng-template let-blog pTemplate="item">   
+                <div class="blog-content card-glass card-shadow">
+                    <div class="title">
+                        {{blog.name}}
+                    </div>
+                    <div class="image">
+                        <img [src]="blog.thumbnail" alt="BLOG">
+                    </div>
+                    <div class="description">
+                        <span>{{blog.description}}</span>
+                    </div>
+                    <div class="link btn">
+                        <a [href]="blog.blogUrl" target="_blank">
+                            <span>Read Blog</span>
+                        </a>
+                    </div>
+                </div>     
+            </ng-template>
+        </p-carousel>
+        <div *ngIf="!isLoaded">
+            <app-loader></app-loader>
+        </div>
+
+        <div class="all-work btn">
+            <a href="https://medium.com/@jeganathpv" target="_blank"><span>Read More Blogs</span></a>
+        </div>
+    </div>
+</div>

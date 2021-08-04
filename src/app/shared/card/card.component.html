@@ -1,0 +1,16 @@
+<div class="card-glass card-shadow">
+    <div class="card" [style.height.px]="height">
+        <div *ngIf="hasImage" class="image">
+            <img [src]="imageUrl" alt="Image">
+        </div>
+        <div class="title">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="content">
+            <span [title]="content">{{content}}</span>
+        </div>
+        <div *ngIf="hasLink" class="link btn">
+            <a [href]="linkUrl" target="_blank"><span>{{linkName}}</span></a>
+        </div>
+    </div>
+</div>

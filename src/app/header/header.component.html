@@ -1,0 +1,33 @@
+<div class="header card-glass">
+    <div class="container flex">
+      <!-- Logo -->
+      <div class="banner">
+        <img src="../../assets/images/title.svg" alt="Jeganath PV" />
+      </div>
+      <!-- WebView Menu -->
+      <div class="web-menu">
+        <ng-container *ngTemplateOutlet="menuItems"></ng-container>
+      </div>
+      <!-- Menu for Mobile view -->
+      <div class="tab-menu">
+        <h1 (click)="overlayMenu.toggle($event)"><i class="icon-menu"></i></h1>
+        <p-overlayPanel #overlayMenu [dismissable]="true" [styleClass]="'p-overlaypanel'" appendTo="body">
+          <div>
+            <ng-container *ngTemplateOutlet="menuItems"></ng-container>
+          </div>
+        </p-overlayPanel>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu Items -->
+  <ng-template #menuItems>
+    <ul>
+      <li (click)="menuItemClick('home')"><span>Home</span></li>
+      <li (click)="menuItemClick('about')"><span>About</span></li>
+      <li (click)="menuItemClick('portfolio')"><span>Portfolio</span></li>
+      <li (click)="menuItemClick('blog')"><span>Blog</span></li>
+      <li (click)="menuItemClick('contact')"><span class="contact">Let's Talk</span></li>
+      <!-- <li (click)="menuItemClick('work')"><span>{{'menu.work' | translate}}</span></li> -->
+    </ul>
+  </ng-template>

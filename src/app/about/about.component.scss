@@ -1,0 +1,125 @@
+.container {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px 0;
+
+  a:hover {
+    color: var(--secondary-light);
+  }
+
+  .image {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .lead{
+      text-align: center;
+      color: var(--secondary-light);
+  }
+
+  .info{
+      margin: auto;
+      font-size: 20px;
+      padding: 20px;
+      span{
+          padding: 5px 0;
+          i{
+              padding-right: 5px;
+          }
+      }
+  }
+
+  .social {
+    font-size: 2em;
+    padding-left: 4px;
+    margin: auto;
+
+    .lead{
+        text-align: center;
+    }
+
+    ul {
+      padding: 0;
+      display: flex;
+      margin: 0;
+      li {
+        padding: 10px;
+      }
+    }
+
+    
+    .icons {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .desc {
+    display: grid;
+    padding: 10px;
+
+    .name {
+      font-family: "Gilroy-ExtraBold";
+      padding: 10px 4px;
+      font-size: 2em;
+      color: var(--secondary-light);
+    }
+
+    span {
+      padding: 5px;
+    }
+    ul {
+      padding: 3px;
+      li {
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .work {
+    padding: 5px 10px;
+    span {
+      padding: 10px;
+      font-size: 25px;
+    }
+  }
+
+  .coffee {
+    display: grid;
+    padding: 10px;
+    span {
+      padding-bottom: 5px;
+    }
+    img {
+      width: 200px;
+      padding-top: 5px;
+    }
+
+    img:hover{
+      box-shadow: var(--font-light) 0px 0 10px;
+      border-radius: 10px;
+  }
+  }
+}
+
+.about,
+.info,
+.social {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 756px) {
+  .container {
+    flex-direction: column;
+  }
+}
