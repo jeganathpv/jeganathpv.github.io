@@ -10,14 +10,14 @@
             </ng-template> -->
             <ng-template let-blog pTemplate="item">   
                 <div class="blog-content card-glass card-shadow">
-                    <div class="title">
-                        {{blog.name}}
+                    <div class="title" [title]="blog.name">
+                        {{blog.name | truncate : 35}}
                     </div>
                     <div class="image">
                         <img [src]="blog.thumbnail" alt="BLOG">
                     </div>
                     <div class="description">
-                        <span>{{blog.description}}</span>
+                        <span>{{blog.description | truncate}}</span>
                     </div>
                     <div class="link btn">
                         <a [href]="blog.blogUrl" target="_blank">
@@ -32,7 +32,7 @@
         </div>
 
         <div class="all-work btn">
-            <a href="https://medium.com/@jeganathpv" target="_blank"><span>Read More Blogs</span></a>
+            <a href="https://jeganathpv.medium.com" target="_blank"><span>Read More Blogs</span></a>
         </div>
     </div>
 </div>
