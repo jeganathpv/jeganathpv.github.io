@@ -12,6 +12,12 @@
     .social a {
         margin: 0 10px;
       }
+    
+    .social a:hover{
+      i{
+        color: var(--secondary-light);
+      }
+    }
   
     .footer-container {
       max-width: 1100px;

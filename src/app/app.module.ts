@@ -17,6 +17,7 @@ import {OverlayPanelModule} from 'primeng/overlaypanel';
 import {CarouselModule} from 'primeng/carousel';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     FooterComponent,
     ContactComponent,
     CardComponent,
-    LoaderComponent
+    LoaderComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
