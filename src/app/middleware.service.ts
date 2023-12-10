@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Contact } from './app.models';
+import { parse as rssparse } from 'rss-to-json';
 
 @Injectable({
   providedIn: 'root'
@@ -47,8 +48,7 @@ export class MiddlewareService {
    * @returns Observable
    */
   getBlogList(){
-    const url = `https://api.rss2json.com/v1/api.json?rss_url=${this.mediumFeedUrl}`;
-    return this.http.get(url);
+    return rssparse(this.mediumFeedUrl)
   }
 
   /**
