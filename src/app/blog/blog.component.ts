@@ -45,7 +45,7 @@ export class BlogComponent implements OnInit {
    * To fetch recent blogs from medium feeds
    */
   fetchRecentBlogs(){
-    this.middleware.getBlogList().subscribe((data: any) => {
+    this.middleware.getBlogList().then((data: any) => {
       const blogItems = data?.items;
       if(!Array.isArray(blogItems)){
         return;
