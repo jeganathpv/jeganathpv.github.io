@@ -54,10 +54,10 @@ export class BlogComponent implements OnInit {
       blogItems.forEach(item => {
         this.blogs.push({
           name: item.title,
-          thumbnail: item.thumbnail,
-          blogUrl: this.sanitizeUrl(item.link),
-          date: item.pubDate,
-          description: this.fetchDescription(item.content)
+          thumbnail: this.fetchThumbnail(item.content_html),
+          blogUrl: this.sanitizeUrl(item.url),
+          date: item.date_published,
+          description: this.fetchDescription(item.content_html)
         });
       });
 
@@ -79,6 +79,17 @@ export class BlogComponent implements OnInit {
     const htmlParser = new DOMParser();
     const htmlElements = htmlParser.parseFromString(content, 'text/html');
     return htmlElements.getElementsByTagName('p')[0].innerText
+  }
+
+  /**
+   * To parse description from content
+   * @param content - HTML COntent
+   * @returns Parsed Paragraph
+   */
+  fetchThumbnail(content: string): string{
+    const htmlParser = new DOMParser();
+    const htmlElements = htmlParser.parseFromString(content, 'text/html');
+    return htmlElements.getElementsByTagName('img')[0].src;
   }
 
 }
