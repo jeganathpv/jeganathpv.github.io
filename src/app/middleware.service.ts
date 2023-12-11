@@ -43,12 +43,31 @@ export class MiddlewareService {
     return this.http.get('https://api.github.com/users/jeganathpv/repos?sort=updated&per_page=10', { headers: this.gitHeader, params: this.gitParameters }).toPromise();
   }
 
+  get apyHeaders(): HttpHeaders {
+    const header = new HttpHeaders({
+      'apy-token': 'APY0QeJ133Vkr9Z5PwpDZrrXYs2VZkof03vQZ5hU83koiuStrYSMLVHQGpyPdXwFUtOFZlmOdn'
+    });
+    header.append('Content-Type', `application/json`);
+    header.append('apy-token', `APY0QeJ133Vkr9Z5PwpDZrrXYs2VZkof03vQZ5hU83koiuStrYSMLVHQGpyPdXwFUtOFZlmOdn`);
+    return header;
+  }
+
   /**
    * To get list of blogs.
    * @returns Observable
    */
-  getBlogList(){
-    return rssparse(this.mediumFeedUrl)
+  async getBlogList(){
+    let cachedResult = sessionStorage.getItem('blog');
+    if (cachedResult) 
+      return JSON.parse(cachedResult);
+    const result = await this.http.post(
+      'https://api.apyhub.com/convert/rss-url/json', 
+      { url: this.mediumFeedUrl } , 
+      { headers: {
+        'apy-token': 'APY0QeJ133Vkr9Z5PwpDZrrXYs2VZkof03vQZ5hU83koiuStrYSMLVHQGpyPdXwFUtOFZlmOdn'
+      } }).toPromise();
+    sessionStorage.setItem('blog', JSON.stringify(result));
+    return result
   }
 
   /**
